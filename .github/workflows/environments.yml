@@ -33,6 +33,7 @@ jobs:
     name: Staging
   steps:
    - name: deploy
+     run: echo i am deploy
  DeployProd:
   name: deploy to production
   needs: DeployStaging
