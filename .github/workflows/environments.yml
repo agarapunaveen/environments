@@ -41,5 +41,6 @@ jobs:
     name: Production
   steps:
     - name: deploy
+      run: echo i am deploy
  
  
