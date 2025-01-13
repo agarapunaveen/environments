@@ -24,5 +24,6 @@ jobs:
    name: Development
   steps:
    - name: deploy
+     run: echo i am deploy
  
  
