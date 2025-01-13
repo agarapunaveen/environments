@@ -25,5 +25,21 @@ jobs:
   steps:
    - name: deploy
      run: echo i am deploy
+ DeployStaging:
+  name: deploy to staging
+  needs: Build
+  runs-on: ubuntu-latest
+  environment:
+    name: Staging
+  steps:
+   - name: deploy
+ DeployProd:
+  name: deploy to production
+  needs: DeployStaging
+  runs-on: ubuntu-latest
+  environment:
+    name: Production
+  steps:
+    - name: deploy
  
  
