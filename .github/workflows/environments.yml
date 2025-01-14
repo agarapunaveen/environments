@@ -39,7 +39,7 @@ jobs:
    - name: deploy
      run: |
       echo "${{ secrets.token }}"
-      echo "{{ vars.username }}
+      echo "${{ vars.username }}"
  DeployProd:
   name: deploy to production
   needs: DeployStaging
