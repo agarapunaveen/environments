@@ -8,10 +8,6 @@ on:
  pull_request:
   branches: main
  workflow_dispatch:
-  inputs:
-   environments:
-    type: environment
-    default: Development
 jobs:
  Build:
   runs-on: ubuntu-latest
@@ -37,19 +33,15 @@ jobs:
     name: Staging
   steps:
    - name: deploy
-     run: |
-      echo "${{ secrets.token }}"
-      echo "${{ vars.username }}"
+     run: echo i am deploy
  DeployProd:
   name: deploy to production
   needs: DeployStaging
   runs-on: ubuntu-latest
   environment:
-    name: Productions
+    name: Production
   steps:
     - name: deploy
-      run: |
-       echo "${{ secrets.token }}"
-       echo "${{ vars.username }}"
+      run: echo i am deploy
  
  
