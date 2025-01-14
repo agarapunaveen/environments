@@ -24,8 +24,8 @@ jobs:
   if: github.event_name == 'pull_request'
   needs: Build
   runs-on: ubuntu-latest
-  environment:
-   name: Development
+  # environment:
+   # name: Development
   steps:
    - name: deploy
      run: echo i am deploy
@@ -33,8 +33,8 @@ jobs:
   name: deploy to staging
   needs: Build
   runs-on: ubuntu-latest
-  environment:
-    name: Staging
+  # environment:
+    # name: Staging
   steps:
    - name: deploy
      run: |
@@ -44,8 +44,8 @@ jobs:
   name: deploy to production
   needs: DeployStaging
   runs-on: ubuntu-latest
-  environment:
-    name: Productions
+  # environment:
+    # name: Productions
   steps:
     - name: deploy
       run: |
